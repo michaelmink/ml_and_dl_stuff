@@ -14,16 +14,12 @@ RUN apt-get update && apt-get install -y \
     libgl1 \
     && rm -rf /var/lib/apt/lists/*
 
+# Copy requirements file
+COPY requirements.txt .
+
 # Python-Pakete
 RUN pip3 install --no-cache-dir \
-    torch torchvision \
-    facenet-pytorch \
-    pillow \
-    tqdm
+    -r requirements.txt
 
 # Arbeitsverzeichnis
 WORKDIR /app
-
-#COPY label_faces.py .
-
-#CMD ["python3", "label_faces.py"]

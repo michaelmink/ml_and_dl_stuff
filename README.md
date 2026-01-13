@@ -3,6 +3,11 @@ this repo contains scripts in the context of machine learning and deep learning.
 
 ## New Concept for Organizing Images
 
+```
+docker build -t image_tagger:2.0.0 . --progress=plain
+docker run -it --rm -v .:/app --gpus all image_tagger:2.0.0 /bin/bash
+```
+
 Example queries:
 * "gib mir alle Bilder auf denen Janine und Joris drauf sind im Urlaub in Südfrankreich letztes Jahr."
 * "gib mir alle Bilder wo wir am Strand baden waren."
@@ -33,7 +38,7 @@ Meta tags per image in FAISS:
 
 Pre-Reqs.:
 * label detected faces
-* train classifier based on cropped face embeddings.
+* train classifier based on cropped face embeddings (use dinov3 (besser: arcface) for embeddings)
 
 Docker-Compose Setup:
 * Python mit CUDA + Pytorch etc. + Modelle (CLIP, ArcNet, Retina, LLama)
