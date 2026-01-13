@@ -25,7 +25,7 @@ for f in content['metadata']['contents']:
 folder_name = "/Automatic Upload/Samsung SM-M356B"
 content = pc.listfolder(path=folder_name)
 # loop over first 10 files
-for f in content['metadata']['contents'][:30]:
+for f in content['metadata']['contents'][30:100]:
     print(f" download {f['name']:40} {f['fileid']:10}")
     # skip if not image
     if not f['name'].lower().endswith(('.png', '.jpg', '.jpeg')):

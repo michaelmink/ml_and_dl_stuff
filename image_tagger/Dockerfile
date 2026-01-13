@@ -23,3 +23,5 @@ RUN pip3 install --no-cache-dir \
 
 # Arbeitsverzeichnis
 WORKDIR /app
+
+USER micmink

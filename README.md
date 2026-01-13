@@ -5,7 +5,8 @@ this repo contains scripts in the context of machine learning and deep learning.
 
 ```
 docker build -t image_tagger:2.0.0 . --progress=plain
-docker run -it --rm -v .:/app --gpus all image_tagger:2.0.0 /bin/bash
+docker run -it --rm -v .:/app --gpus all -p 8501:8501 image_tagger:2.0.0 /bin/bash
+streamlit run start_server.py --server.port 8501 --server.address 0.0.0.0
 ```
 
 Example queries:
