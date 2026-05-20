@@ -1,0 +1,19 @@
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+scipy
+tqdm
+jupyterlab
+ipywidgets
+tensorboard
+# torch, torchvision, torchaudio are installed separately (CPU) via postCreateCommand
+torchmetrics
+lightning
+transformers
+datasets
+accelerate
+safetensors
+pillow
+opencv-python-headless
